@@ -36,6 +36,8 @@ public class MainFrame extends JFrame{
 	
 	public Controller controller;
 	public static View view;
+	public static Toolkit toolkit;
+
 	
 	public Battle battle = new Battle();
 	public static List<Player> players = new ArrayList<Player>();
@@ -65,7 +67,7 @@ public class MainFrame extends JFrame{
 		view = new View();
 		
 		//load images
-		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		this.toolkit = Toolkit.getDefaultToolkit();
 		this.imgTerrain = toolkit.getImage(getClass().getResource("/img/"+"Terrain"+".png"));
 		this.imgCity = toolkit.getImage(getClass().getResource("/img/"+"Units"+".png"));
 		this.imgUnits = toolkit.getImage(getClass().getResource("/img/"+"Units"+".png"));
